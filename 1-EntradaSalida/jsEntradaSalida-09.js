@@ -11,3 +11,8 @@ function mostrarAumento()
 
 	document.getElementById ("txtIdResultado").value = numero1 * 1.1
 }
+
+/*
+Nicolas Costantini
+ Div B 
+ */

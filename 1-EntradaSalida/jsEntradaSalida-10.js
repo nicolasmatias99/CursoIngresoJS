@@ -14,3 +14,8 @@ function mostrarAumento()
 	document.getElementById("txtIdResultado").value = resultado;
 
 }
+
+/*
+Nicolas Costantini
+ Div B 
+ */

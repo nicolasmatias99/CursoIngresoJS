@@ -52,3 +52,7 @@ function dividir()
 	alert (resultado)
 }
 
+/*
+Nicolas Costantini
+ Div B 
+ */

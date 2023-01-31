@@ -10,4 +10,7 @@ function mostrar()
 	nombre.value = ""
 }
 
-
+/*
+Nicolas Costantini
+ Div B 
+ */

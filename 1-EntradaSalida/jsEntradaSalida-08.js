@@ -17,3 +17,8 @@ function SacarResto()
     
 	alert (resto)
 }
+
+/*
+Nicolas Costantini
+ Div B 
+ */

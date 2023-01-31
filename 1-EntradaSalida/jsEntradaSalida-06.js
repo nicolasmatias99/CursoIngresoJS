@@ -18,3 +18,7 @@ function sumar()
 	alert (suma);
 }
 
+/*
+Nicolas Costantini
+ Div B 
+ */

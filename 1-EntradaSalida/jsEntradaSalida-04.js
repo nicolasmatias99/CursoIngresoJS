@@ -11,3 +11,8 @@ nombre = prompt("ingrese su nombre");
 document.getElementById("txtIdNombre").value = nombre;
 
 }
+
+/*
+Nicolas Costantini
+ Div B 
+ */
