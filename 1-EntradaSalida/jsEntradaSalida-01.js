@@ -6,3 +6,7 @@ function mostrar()
 	alert("Esto funciona de maravilla");
 }
 
+/*
+Nicolas Costantini
+ Div B 
+ */
