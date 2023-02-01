@@ -15,7 +15,7 @@ function SacarResto()
 	
 	resto = parseInt(numero1) % parseInt(numero2);
     
-	alert ("su resultado es " + resto)
+	alert ("el resto es " + resto)
 }
 
 /*
