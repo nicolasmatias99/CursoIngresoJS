@@ -1,5 +1,4 @@
-/*Nicolas Costantini
- Div B 
+/*
 Debemos lograr tomar el importe por ID.
 Transformarlo a entero (parseInt), luego
 mostrar el importe con un Descuento del 25 %
@@ -15,3 +14,8 @@ function mostrarAumento()
 	document.getElementById("txtIdResultado").value = resultado;
 
 }
+
+/*
+Nicolas Costantini
+ Div B 
+ */
