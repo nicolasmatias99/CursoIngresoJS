@@ -1,4 +1,5 @@
-/*
+/*Nicolas Costantini
+ Div B 
 Debemos lograr tomar el importe por ID ,
 transformarlo a entero (parseInt), luego
 mostrar el importe con un aumento del 10 %
@@ -11,8 +12,3 @@ function mostrarAumento()
 
 	document.getElementById ("txtIdResultado").value = numero1 * 1.1
 }
-
-/*
-Nicolas Costantini
- Div B 
- */

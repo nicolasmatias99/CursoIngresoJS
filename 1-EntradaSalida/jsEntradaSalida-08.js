@@ -1,4 +1,5 @@
-/*
+/*Nicolas Costantini
+ Div B 
 Debemos lograr tomar Los numeros por ID ,
 transformarlos a enteros (parseInt),realizar la operación correcta y 
 mostrar el resto entre el dividendo y el divisor.
@@ -17,8 +18,3 @@ function SacarResto()
     
 	alert ("el resto es " + resto)
 }
-
-/*
-Nicolas Costantini
- Div B 
- */
