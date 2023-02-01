@@ -15,7 +15,7 @@ function sumar()
 	suma = parseInt (numero1) + parseInt (numero2);
 
 
-	alert (suma);
+	alert ("su resultado es " + suma);
 }
 
 /*

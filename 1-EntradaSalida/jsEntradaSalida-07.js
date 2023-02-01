@@ -15,7 +15,7 @@ function sumar()
 
 	resultado = parseInt(numero1) + parseInt(numero2)
 
-	alert (resultado)
+	alert ("su restultado es " + resultado)
 }
 
 function restar()
@@ -26,18 +26,18 @@ function restar()
 
 	resultado = parseInt(numero1) - parseInt(numero2)
 
-	alert (resultado)
+	alert ("su restultado es " + resultado)
 }
 
 function multiplicar()
 {
-	 numero1 = document.getElementById("txtIdNumeroUno").value;
+	numero1 = document.getElementById("txtIdNumeroUno").value;
 
     numero2 = document.getElementById("txtIdNumeroDos").value;
 
     resultado = parseInt(numero1) * parseInt(numero2)
 
-     alert (resultado)
+    alert ("su restultado es " + resultado)
 	
 }
 
@@ -49,7 +49,7 @@ function dividir()
 
 	resultado = parseInt(numero1) / parseInt(numero2)
 
-	alert (resultado)
+	alert ("su restultado es " + resultado)
 }
 
 /*
