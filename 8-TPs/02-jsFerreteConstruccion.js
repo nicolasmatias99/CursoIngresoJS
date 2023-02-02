@@ -43,18 +43,18 @@ function Materiales ()
 {
     let largoDelTerreno;
     let anchoDelTerreno;
-    let mt2;
+    let mtCuadrados;
     let cal;
     let cemento;
 
-    largoDelTerreno = parseInt (document.getElementById("txtIdLargo").value); 
-    anchoDelTerreno = parseInt (document.getElementById("txtIdAncho").value);
+    largoDelTerreno = parseFloat (document.getElementById("txtIdLargo").value); 
+    anchoDelTerreno = parseFloat (document.getElementById("txtIdAncho").value);
 
-    mt2 = largoDelTerreno * anchoDelTerreno;
+    mtCuadrados = largoDelTerreno * anchoDelTerreno;
 
-    cal = mt2 * 3;
+    cal = mtCuadrados * 3;
 
-    cemento = mt2 * 2;
+    cemento = mtCuadrados * 2;
     
     alert("se nesecita comprar " + cal + " bolsas de cal" + " y " + cemento + " bolsas de cemento.");
 

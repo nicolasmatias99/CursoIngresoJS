@@ -6,45 +6,45 @@ mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
 function sumar()
 {	
-	let numero1;
-	let numero2;
+	let numeroUno;
+	let numeroDos;
 	let resultado;
 	
-	numero1 = document.getElementById("txtIdNumeroUno").value;
+	numeroUno = document.getElementById("txtIdNumeroUno").value;
 
-	numero2 = document.getElementById("txtIdNumeroDos").value;
+	numeroDos = document.getElementById("txtIdNumeroDos").value;
 
-	resultado = parseInt(numero1) + parseInt(numero2)
+	resultado = parseInt(numeroUno) + parseInt(numeroDos)
 
 	alert ("su restultado es " + resultado)
 }
 
 function restar()
 {
-	let numero1;
-	let numero2;
+	let numeroUno;
+	let numeroDos;
 	let resultado;
 
-	numero1 = document.getElementById("txtIdNumeroUno").value;
+	numeroUno = document.getElementById("txtIdNumeroUno").value;
 
-	numero2 = document.getElementById("txtIdNumeroDos").value;
+	numeroDos = document.getElementById("txtIdNumeroDos").value;
 
-	resultado = parseInt(numero1) - parseInt(numero2)
+	resultado = parseInt(numeroUno) - parseInt(numeroDos)
 
 	alert ("su restultado es " + resultado)
 }
 
 function multiplicar()
 {
-	let numero1;
-	let numero2;
+	let numeroUno;
+	let numeroDos;
 	let resultado;
 
-	numero1 = document.getElementById("txtIdNumeroUno").value;
+	numeroUno = document.getElementById("txtIdNumeroUno").value;
 
-    numero2 = document.getElementById("txtIdNumeroDos").value;
+    numeroDos = document.getElementById("txtIdNumeroDos").value;
 
-    resultado = parseInt(numero1) * parseInt(numero2)
+    resultado = parseInt(numeroUno) * parseInt(numeroDos)
 
     alert ("su restultado es " + resultado)
 	
@@ -52,15 +52,15 @@ function multiplicar()
 
 function dividir()
 {
-	let numero1;
-	let numero2;
+	let numeroUno;
+	let numeroDos;
 	let resultado;
 	
-	numero1 = document.getElementById("txtIdNumeroUno").value;
+	numeroUno = document.getElementById("txtIdNumeroUno").value;
 
-	numero2 = document.getElementById("txtIdNumeroDos").value;
+	numeroDos = document.getElementById("txtIdNumeroDos").value;
 
-	resultado = parseInt(numero1) / parseInt(numero2)
+	resultado = parseInt(numeroUno) / parseInt(numeroDos)
 
 	alert ("su restultado es " + resultado)
 }

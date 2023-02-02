@@ -9,7 +9,7 @@ function FahrenheitCentigrados ()
     let fahrenheit;
     let centígrados;
 
-    fahrenheit = document.getElementById("txtIdTemperatura").value;
+    fahrenheit = parseFloat (document.getElementById("txtIdTemperatura").value);
 
     centígrados = (fahrenheit - 32) * 5/9; 
 
@@ -22,7 +22,7 @@ function CentigradosFahrenheit ()
     let centígrados;
 	let fahrenheit;
 
-    centígrados = document.getElementById("txtIdTemperatura").value; 
+    centígrados = parseFloat (document.getElementById("txtIdTemperatura").value); 
 
     fahrenheit = (centígrados * 9/5) + 32;
 

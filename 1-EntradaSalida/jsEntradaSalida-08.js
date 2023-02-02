@@ -6,15 +6,43 @@ mostrar el resto entre el dividendo y el divisor.
 ej.: "El resto es 0 ."*/
 function SacarResto()
 {
-	let numero1;
-	let numero2;
+	/*let numeroUno;
+	let numeroDos;
 	let resto;
 
-	numero1 = document.getElementById("txtIdNumeroDividendo").value;
+	numeroUno = document.getElementById("txtIdNumeroDividendo").value;
 
-	numero2 = document.getElementById("txtIdNumeroDivisor").value;
+	numeroDos = document.getElementById("txtIdNumeroDivisor").value;
 	
-	resto = parseInt(numero1) % parseInt(numero2);
+	resto = parseInt(numeroUno) % parseInt(numeroDos);
     
-	alert ("el resto es " + resto)
+	alert ("el resto es " + resto)*/
+
+	//--------------------------------------------------------------------------//
+	/*
+	Ejercicio 8.bis: Ingresar dos numeros por id
+	Se pide:
+	mostrar por alert:
+	a) La suma de los dos numeros
+	b) El promedio de los numeros
+	c) El resto de los numeros (el primero en modulo del segundo)
+	*/
+	//--------------------------------------------------------------------------//
+
+	let numeroUno;
+	let numeroDos;
+	let suma;
+	let promedio;
+	let resto;
+
+	numeroUno = parseInt (document.getElementById("txtIdNumeroDividendo").value);
+	numeroDos = parseInt (document.getElementById("txtIdNumeroDivisor").value);
+
+	suma = numeroUno + numeroDos;
+	promedio = (numeroUno + numeroDos) / 2; 
+	resto = numeroUno % numeroDos;
+
+	alert (suma);
+	alert (promedio);
+	alert (resto);
 }
