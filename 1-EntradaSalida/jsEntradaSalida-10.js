@@ -22,6 +22,12 @@ function mostrarAumento()
 	document.getElementById("txtIdResultado").value = resultado;
 	*/
 
+	/*
+	Ejercicio 10.bis: Debemos lograr tomar el importe por ID.
+	Transformarlo a entero (parseInt), luego
+	pedirle al usuario un % de descuento y mostrar el importe en el cuadro de texto "RESULTADO"
+	*/
+
 	let importe;
 	let descuento;
 	let resultado;
@@ -38,10 +44,6 @@ function mostrarAumento()
 	document.getElementById("txtIdResultado").value = total;
 
 }
-/*
-Ejercicio 10.bis: Debemos lograr tomar el importe por ID.
-Transformarlo a entero (parseInt), luego
-pedirle al usuario un % de descuento y mostrar el importe en el cuadro de texto "RESULTADO"
-*/
+
 
 
