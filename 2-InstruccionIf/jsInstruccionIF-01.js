@@ -4,9 +4,10 @@ function mostrar()
 
 	let edad
 
-	edad = document.getElementById("txtIdEdad").value
+	edad = parseInt(document.getElementById("txtIdEdad").value);
 	
-	if(edad==15) {
+	if (edad==15) 
+	{
 
 		alert ("niña bonita")
 		
@@ -15,4 +16,4 @@ function mostrar()
 
 	
 
-}//FIN DE LA FUNCIÓN
+}	//FIN DE LA FUNCIÓN
