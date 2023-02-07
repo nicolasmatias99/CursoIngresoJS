@@ -4,12 +4,12 @@ function mostrar()
 	
 	let edad;
 
-	edad = parseInt(document.getElementById("txtIdEdad").value);
+	edad = document.getElementById("txtIdEdad").value;
 
-	if (edad >= 13 & edad <= 17)
+	if (edad >= 13 && edad <= 17)
 	{
 		alert ("usted es adolescente");
 	}
 
 
-}	//FIN DE LA FUNCIÓN
+}	//FIN DE LA FUNCIÓNs
