@@ -10,8 +10,10 @@ function mostrar()
 	estacion = document.getElementById("txtIdEstacion").value;
 	destino = document.getElementById("txtIdDestino").value;
 
-	switch(estacion){
+	switch(estacion)
+	{
 		case "Invierno":
+
 			if (destino == "Bariloche"){
 				aumento = 20;
 			}
@@ -22,7 +24,9 @@ function mostrar()
 				descuento = -10;
 			}
 			break;
+
 		case "Verano":
+
 			if (destino == "Bariloche"){
 				descuento = -20;
 			}
@@ -33,8 +37,10 @@ function mostrar()
 				aumento = 10;
 			}
 			break;
+
 		case "Otoño":
 		case "Primavera":
+
 			if (destino == "Cordoba"){
 				precioFinal = precio;
 			}
@@ -57,4 +63,5 @@ function mostrar()
 	
 
 	 alert ("En " + estacion + " el precio de estadia en " + destino + " es de " + precioFinal);
+	 
 }//FIN DE LA FUNCIÓN
