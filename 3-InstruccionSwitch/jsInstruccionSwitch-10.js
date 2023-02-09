@@ -10,19 +10,25 @@ function mostrar()
 
 	switch(estacion){
 		case "Invierno":
-			if (destino == "Bariloche"){
+
+			if (destino == "Bariloche")
+			{
 				alert("Se viaja");
 			}
-			else{
+			else
+			{
 				alert("No se viaja");
 			}
 			break;
 
 		case "Verano":
-			if (destino == "Mar del plata" || destino == "Cataratas"){
+
+			if (destino == "Mar del plata" || destino == "Cataratas")
+			{
 				alert ("Se viaja");
 			}
-			else{
+			else
+			{
 				alert ("No se viaja");
 			}
 			break;
@@ -32,10 +38,13 @@ function mostrar()
 				break;
 
 		case "Primavera":
-			if (destino != "Bariloche"){
+
+			if (destino != "Bariloche")
+			{
 				alert ("Se viaja");
 			}
-			else{
+			else
+			{
 			alert ("No se viaja");
 			}
 			break;
