@@ -8,7 +8,8 @@ function mostrar()
 	estacion = document.getElementById("txtIdEstacion").value;
 	destino = document.getElementById("txtIdDestino").value;
 
-	switch(estacion){
+	switch(estacion)
+	{
 		case "Invierno":
 
 			if (destino == "Bariloche")
