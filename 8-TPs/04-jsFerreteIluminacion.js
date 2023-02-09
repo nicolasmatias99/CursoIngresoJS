@@ -9,6 +9,67 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
  */
 function CalcularPrecio () 
-{
- 	
-}
+{   
+    const PRECIO = 35;
+    let cantidad;
+    let marca; 
+    let descuento; 
+    let precioFinal;
+    let precioSinDescuento;
+    let iibb;
+    
+    marca = document.getElementById("Marca").value;
+
+    cantidad = parseInt(document.getElementById("txtIdCantidad").value);
+
+     if (cantidad >= 6 )
+   {
+        descuento = -50; 
+   }
+   else if (cantidad == 5 && marca == "ArgentinaLuz")
+   {
+        descuento = -40; 
+   }
+   else if (cantidad == 5 && marca != "ArgentinaLuz")
+   {
+        descuento = -30; 
+   }
+   else if (cantidad == 4 && marca == "ArgentinaLuz" && marca == "FelipeLamparas")
+   {
+        descuento = -25;  
+   }
+   else if (cantidad == 4 && marca != "ArgentinaLuz" && marca != "FelipeLamparas")
+   {
+        descuento = -20; 
+   }
+    else if (cantidad == 3 && marca == "ArgentinaLuz")
+    {
+        descuento = -15; 
+    }
+    else if (cantidad == 3 && marca == "FelipeLamparas")
+    {
+        descuento = -10; 
+    }
+    else if (cantidad == 3 && marca != "ArgentinaLuz" && marca != "FelipeLamparas")
+    {
+        descuento = -5; 
+    }
+    else
+    {
+        descuento = 0;
+    }
+    
+    precioSinDescuento = cantidad * PRECIO;      //PRECIO FINAL SIN DESCUENTO.
+
+    precioFinal = Math.round(precioSinDescuento + precioSinDescuento * descuento / 100);     //HAGO EL DESCUENTO Y REDONDEO.          
+
+    if (precioFinal > 120) 
+    {
+        iibb = Math.round(precioFinal * 10 / 100);         // APLICO IMPUESTOS Y REDONDEO.
+        precioFinal += iibb;
+        alert("Usted pago " + iibb + " de IIBB.");  
+    }
+
+    document.getElementById("txtIdprecioDescuento").value = "El precio total es de: " + precioFinal;    //MUESTRO EL PRECIO FINAL.
+ }
+ 
