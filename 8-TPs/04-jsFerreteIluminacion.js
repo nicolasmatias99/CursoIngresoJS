@@ -22,38 +22,53 @@ function CalcularPrecio ()
 
     cantidad = parseInt(document.getElementById("txtIdCantidad").value);
 
-     if (cantidad >= 6 )
+     if (cantidad > 5 )
    {
         descuento = -50; 
    }
-   else if (cantidad == 5 && marca == "ArgentinaLuz")
-   {
-        descuento = -40; 
-   }
-   else if (cantidad == 5 && marca != "ArgentinaLuz")
-   {
-        descuento = -30; 
-   }
-   else if (cantidad == 4 && marca == "ArgentinaLuz" && marca == "FelipeLamparas")
-   {
-        descuento = -25;  
-   }
-   else if (cantidad == 4 && marca != "ArgentinaLuz" && marca != "FelipeLamparas")
-   {
-        descuento = -20; 
-   }
-    else if (cantidad == 3 && marca == "ArgentinaLuz")
-    {
-        descuento = -15; 
-    }
-    else if (cantidad == 3 && marca == "FelipeLamparas")
-    {
-        descuento = -10; 
-    }
-    else if (cantidad == 3 && marca != "ArgentinaLuz" && marca != "FelipeLamparas")
-    {
-        descuento = -5; 
-    }
+   else if (cantidad == 5)
+       
+        {
+            if (marca == "ArgentinaLuz")
+            {
+                descuento = -40; 
+            }
+            else
+            {
+                descuento = -30;
+            }
+        }   
+    
+   else if (cantidad == 4 ) 
+       
+        {
+            if (marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+            {
+                descuento = -25;  
+            } 
+            else 
+            {
+                descuento = -20;
+            }    
+        }
+
+    else if (cantidad == 3 )
+
+        {
+            if (marca == "ArgentinaLuz")  
+            {    
+                descuento = -15; 
+            }
+            else if (marca == "FelipeLamparas")
+            {
+                descuento = -10;
+            }
+            else 
+            {
+                descuento = -5;
+            }   
+        }  
+
     else
     {
         descuento = 0;
