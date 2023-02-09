@@ -15,7 +15,8 @@ function mostrar()
 	}
 	*/
 
-	//FIN DE LA FUNCIÓN
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	/*Ejercicio 1bis: 
 	/con if
 	pedir a una persona que fue de vaciones , 
@@ -26,6 +27,8 @@ function mostrar()
 	hasta 100= buen ritmo
 	hasta 120= ahi de la ley 
 	mas = eso no se hace */
+
+	/*
 
 	let distancia;
 	let tiempo;
@@ -51,7 +54,54 @@ function mostrar()
 	else {
 		alert("la velocidad es de " + velocidad + " km/hr. Eso no se hace!");
 	}
+*/
+	//FIN DE EJERCICIO BIS.
 
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/*
+	Ejercicio 1 bis bis:
+con if
+ingresar el nombre y los datos requeridos para calcular el IMC , 
+e informar a la persona si es:
+Bajo peso <18.5
+Peso normal 18,5-24.9
+Preobesidad 25-26.9
+Obesidad I 27-29.9
+Obesidad II 30-34.9
+Obesidad III >40
+*/
 
+let peso;
+let altura;
+let imc;
 
+peso = parseFloat(document.getElementById("txtIdEdad").value);
+altura = parseFloat(prompt("Ingrese su altura en metros. Ejemplo: 1.78"));
+
+imc = parseFloat (peso / (altura * altura));
+
+if (imc < 18.5)
+{
+	alert ("Bajo peso");
+}
+else if (imc >= 18.5 && imc < 25)
+{
+	alert ("Peso normal");
+}
+else if (imc >= 25 && imc < 27)
+{
+	alert ("Preobesidad");
+}
+else if (imc >= 27 && imc < 30)
+{
+	alert ("Obesidad I ");
+}
+else if (imc >= 30 && imc < 35)
+{
+	alert ("Obesidad II");
+}
+else 
+{
+	alert ("Obesidad III");
 }	
+}
