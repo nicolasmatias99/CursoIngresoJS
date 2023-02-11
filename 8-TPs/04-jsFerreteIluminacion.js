@@ -22,7 +22,308 @@ function CalcularPrecio ()
 
     cantidad = parseInt(document.getElementById("txtIdCantidad").value);
 
-     if (cantidad > 5 )
+    //TODO SWITCH.
+    
+    switch(cantidad)
+    {   
+        case 5:
+        
+            switch(marca)
+            {
+                case "ArgentinaLuz":
+                    
+                    descuento = -40;   
+                    break;
+
+                case "FelipeLamparas": 
+                case "JeLuz":
+                case "HazIluminacion":
+                case "Osram":
+                    descuento = -30;
+                    break;
+            }
+        break;
+
+        case 4: 
+
+            switch(marca)
+            {
+                case "ArgentinaLuz":
+                case "FelipeLamparas":
+                    
+                    descuento = -25;
+                    break;
+
+                case "JeLuz":
+                case "HazIluminacion":
+                case "Osram":
+
+                    descuento = -20;
+                    break;
+            }
+        break;
+
+        case 3:
+
+            switch(marca)
+            {
+                case "ArgentinaLuz":
+                    
+                    descuento = -15;
+                    break;
+                
+                case "FelipeLamparas":
+                    
+                    descuento = -10;
+                    break;
+                
+                case "JeLuz":
+                case "HazIluminacion":
+                case "Osram":
+                    
+                    descuento = -5;
+                    break;
+            }
+        break;
+
+        case 2:
+        case 1:
+
+            descuento = 0;
+                
+        break;
+
+        default: 
+
+            descuento = -50;
+                
+        break;   
+        }
+
+        precioSinDescuento = cantidad * PRECIO;      //PRECIO FINAL SIN DESCUENTO.
+    
+        precioFinal = Math.round(precioSinDescuento + precioSinDescuento * descuento / 100);     //HAGO EL DESCUENTO Y REDONDEO.
+    
+        if (precioFinal > 120) 
+        {
+            iibb = Math.round(precioFinal * 10 / 100);         // APLICO IMPUESTOS Y REDONDEO.
+            precioFinal += iibb;
+            alert("Usted pago " + iibb + " de IIBB.");  
+        }
+    
+        document.getElementById("txtIdprecioDescuento").value = "El precio total es de: " + precioFinal;    //MUESTRO EL PRECIO FINAL.
+    
+
+       
+    //SWITCH CON MARCA E IF CON CANTIDAD.
+    
+    /*
+    switch (marca)
+    {
+        case "ArgentinaLuz":
+
+            if (cantidad > 5)
+
+                {
+                    descuento = -50
+                }
+
+            else if (cantidad == 5)
+
+                {
+                    descuento = -40;
+                }
+
+            else if (cantidad == 4)
+
+                {
+                    descuento = -25;
+                }
+            
+            else if (cantidad == 3)
+
+                {
+                    descuento = -15;
+                }
+
+            else 
+
+                {
+                    descuento = 0;
+                }
+
+            break;
+        
+        case "FelipeLamparas":
+
+            if (cantidad > 5)
+
+                {
+                    descuento = -50;
+                }
+
+            else if (cantidad == 5)
+
+                {
+                    descuento = -30;
+                }
+
+            else if (cantidad == 4)
+
+                {
+                    descuento = -25;
+                }
+            
+            else if (cantidad == 3)
+
+                {
+                    descuento = -10;
+                }
+
+            else 
+
+                {
+                    descuento = 0;
+                }
+
+            break;
+
+        case "JeLuz":
+        case "HazIluminacion":
+        case "Osram":
+
+            if (cantidad > 5)
+
+                {
+                    descuento = -50;
+                }
+
+            else if (cantidad == 5)
+                
+                {
+                    descuento = -30;
+                }
+
+            else if (cantidad == 4)
+
+                {
+                    descuento = -20;
+                }
+            
+            else if (cantidad == 3)
+
+                {
+                    descuento = -5;
+                }
+
+            else 
+                {
+                    descuento = 0;
+                }
+
+            break;
+    }
+
+    precioSinDescuento = cantidad * PRECIO;      //PRECIO FINAL SIN DESCUENTO.
+    
+    precioFinal = Math.round(precioSinDescuento + precioSinDescuento * descuento / 100);     //HAGO EL DESCUENTO Y REDONDEO.
+
+    if (precioFinal > 120) 
+    {
+        iibb = Math.round(precioFinal * 10 / 100);         // APLICO IMPUESTOS Y REDONDEO.
+        precioFinal += iibb;
+        alert("Usted pago " + iibb + " de IIBB.");  
+    }
+
+    document.getElementById("txtIdprecioDescuento").value = "El precio total es de: " + precioFinal;    //MUESTRO EL PRECIO FINAL.
+/*
+    
+    //SWTICH CON CANTIDAD E IF CON MARCA
+/*
+    switch (cantidad)
+    {
+        case 5:
+
+            if (marca == "ArgentinaLuz")
+                {
+                    descuento = -40;
+                }
+
+            else 
+                {
+                    descuento = -30 ;
+                }
+
+            break;
+        
+        case 4:
+
+            if (marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+                {
+                    descuento = -25;
+                }
+
+            else 
+                {
+                    descuento = -20;
+                }
+
+            break;
+
+        case 3:
+
+            if (marca == "ArgentinaLuz")
+                {
+                    descuento = -15;
+                }
+
+            else if (marca == "FelipeLamparas")
+                {
+                    descuento = -10;
+                }
+
+            else 
+                {
+                    descuento = -5;
+                }
+                
+            break;
+
+        case 2:
+        case 1:
+                {
+                    descuento = 0;
+                }
+
+            break;
+
+        default: 
+                {
+                descuento = -50;
+                }
+
+            break;
+    }
+
+    precioSinDescuento = cantidad * PRECIO;      //PRECIO FINAL SIN DESCUENTO.
+    
+    precioFinal = Math.round(precioSinDescuento + precioSinDescuento * descuento / 100);     //HAGO EL DESCUENTO Y REDONDEO.
+
+    if (precioFinal > 120) 
+    {
+        iibb = Math.round(precioFinal * 10 / 100);         // APLICO IMPUESTOS Y REDONDEO.
+        precioFinal += iibb;
+        alert("Usted pago " + iibb + " de IIBB.");  
+
+    }
+
+    document.getElementById("txtIdprecioDescuento").value = "El precio total es de: " + precioFinal;    //MUESTRO EL PRECIO FINAL.
+
+    /*
+
+    //SOLO IF.        
+
+  /*   if (cantidad > 5 )
    {
         descuento = -50; 
    }
@@ -30,49 +331,49 @@ function CalcularPrecio ()
        
         {
             if (marca == "ArgentinaLuz")
-            {
-                descuento = -40; 
-            }
+                {
+                    descuento = -40; 
+                }
             else
-            {
-                descuento = -30;
-            }
+                {
+                    descuento = -30;
+                }
         }   
     
    else if (cantidad == 4 ) 
        
         {
             if (marca == "ArgentinaLuz" || marca == "FelipeLamparas")
-            {
-                descuento = -25;  
-            } 
+                {
+                    descuento = -25;  
+                } 
             else 
-            {
-                descuento = -20;
-            }    
+                {
+                    descuento = -20;
+                }    
         }
 
     else if (cantidad == 3 )
 
         {
             if (marca == "ArgentinaLuz")  
-            {    
-                descuento = -15; 
-            }
+                {    
+                    descuento = -15; 
+                }
             else if (marca == "FelipeLamparas")
-            {
-                descuento = -10;
-            }
+                {
+                    descuento = -10;
+                }
             else 
-            {
-                descuento = -5;
-            }   
+                {
+                    descuento = -5;
+                }   
         }  
 
     else
-    {
-        descuento = 0;
-    }
+        {
+            descuento = 0;
+        }
     
     precioSinDescuento = cantidad * PRECIO;      //PRECIO FINAL SIN DESCUENTO.
 
@@ -84,7 +385,9 @@ function CalcularPrecio ()
         precioFinal += iibb;
         alert("Usted pago " + iibb + " de IIBB.");  
     }
+    
 
     document.getElementById("txtIdprecioDescuento").value = "El precio total es de: " + precioFinal;    //MUESTRO EL PRECIO FINAL.
- }
+ */
+}
  
