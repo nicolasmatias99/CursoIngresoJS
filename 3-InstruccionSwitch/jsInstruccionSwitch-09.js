@@ -1,3 +1,4 @@
+//NICOLAS COSTANTINI
 function mostrar()
 {
 	const precio = 15000

@@ -1,8 +1,9 @@
 function mostrar()
 {
-	var i; 
+	let numero; 
 	
-	for(i= 1;i <= 10;i++){
-		alert(i);
+	for(numero = 1; numero <= 10; i++)
+	{
+		console.log(numero);
 	}
 }

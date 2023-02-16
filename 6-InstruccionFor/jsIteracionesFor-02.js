@@ -1,10 +1,10 @@
 function mostrar()
 {
 
-	var i; 
+	let numero; 
 	
-	for(i= 10;i > 0;i--){
-		document.write (i);
-		console.log (i);
+	for(numero = 10; numero > 0; numero --)
+	{	
+		console.log (numero);
 	}
 }

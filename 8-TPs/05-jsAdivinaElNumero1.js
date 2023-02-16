@@ -1,3 +1,4 @@
+//NICOLAS COSTANTINI
 /*Al comenzar el juego generamos un número 
 secreto del 1 al 100, en la pantalla del juego
  dispondremos de un cuadro de texto para ingresar

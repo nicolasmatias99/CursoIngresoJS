@@ -1,3 +1,4 @@
+//NICOLAS COSTANTINI
 function mostrar()
 {
 	//Genero el número RANDOM entre 1 y 10 

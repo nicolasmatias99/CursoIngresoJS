@@ -1,3 +1,4 @@
+//NICOLAS COSTANTINI
 /*En esta oportunidad el juego evaluará tus
  aptitudes a partir de la cantidad de intentos, 
  por lo cual se informará lo siguiente:

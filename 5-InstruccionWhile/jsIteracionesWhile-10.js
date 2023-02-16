@@ -1,4 +1,4 @@
-/*
+/*NICOLAS COSTANTINI
 Al presionar el botón pedir  números  
 hasta que el usuario quiera, mostrar:
 1-Suma de los negativos.
@@ -13,17 +13,66 @@ hasta que el usuario quiera, mostrar:
 function mostrar()
 {
 	//declarar contadores y variables 
-	var respuesta;
-	var numeroIngresado;
-	var sumaNegativos=0;
+	let respuesta;
+	let numeroIngresado;
+	let acumuladorNegativos;
+	let acumuladorPositivos;
+	let contadorNegativos;
+	let contadorPositivos;
+	let contadorDeCeros;
+	let contadorNumerosPares;
+	let promedioPositivo;
+	let promedioNegativo;
+	let diferencia;
 
-	respuesta="si";
+	contadorDeCeros = 0;
+	contadorNegativos = 0;
+	contadorNumerosPares = 0;
+	contadorPositivos = 0;
+	acumuladorPositivos = 0;
+	acumuladorNegativos = 0;
+	respuesta = "si";
 
-	while(respuesta=="si")
+	while(respuesta == "si")
 	{
+		numeroIngresado = parseInt(prompt("Ingrese un número"));
+		while (isNaN(numeroIngresado))
+		{
+			numeroIngresado = parseInt (prompt("Error, ingrese un número"));
+		}
 		
-		respuesta=prompt("desea continuar?");
+		if(numeroIngresado < 0)
+		{
+			acumuladorNegativos += numeroIngresado;
+			contadorNegativos ++;
+		}
+		else if (numeroIngresado > 0 )
+		{
+			acumuladorPositivos += numeroIngresado;
+			contadorPositivos ++;
+		}
+		else
+		{
+			contadorDeCeros ++;
+		}
+		if (numeroIngresado % 2 == 0)
+		{
+			contadorNumerosPares ++;
+		}
+		respuesta = prompt("desea continuar? si/no");
 	}//fin del while
 
-	document.write("la suma de negativos es :"+sumaNegativos);
+	promedioNegativo = acumuladorNegativos / contadorNegativos;
+	promedioPositivo = acumuladorPositivos / contadorPositivos;
+	diferencia = acumuladorNegativos + acumuladorPositivos;
+
+	console.log("la suma de los negativos es :"+ acumuladorNegativos);
+	console.log("la suma de los positivos es " + acumuladorPositivos);
+	console.log("la cantidad de positivos es " + contadorPositivos);
+	console.log("la cantidad de negativos es " + contadorNegativos);
+	console.log("la cantidad de ceros es de " + contadorDeCeros);
+	console.log("la cantidad de numeros pares es de " + contadorNumerosPares);
+	console.log("el promedio de los positivos es de " + promedioPositivo);
+	console.log("el promedio de los negativos es de " + promedioNegativo);
+	console.log("la diferencia es de " + diferencia);
 }//FIN DE LA FUNCIÓN
