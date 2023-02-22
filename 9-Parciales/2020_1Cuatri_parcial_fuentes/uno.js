@@ -19,21 +19,30 @@ function mostrar()
 	let fabricante;
 	let precio;
 	let cantidad;
+
 	let cantidadAlcohol;
 	let cantidadAlcoholMasBajo;
 	let precioAlcoholMasBajo;
 	let fabricanteAlcoholMasBajo;
+
 	let cantidadBarbijo;
 	let cantidadJabon;
-	let banderaAlcohol;
-	let banderaTipo;
+
+	let contadorAlcohol = 0;
+	let contadorJabon = 0;
+	let contadorBarbijo = 0;
+	
+	let suma;
+	let promedio;
+
 	let productoMayor;
 	let cantidadMayor;
-	let promedio;
-	let suma;
-	
+	let banderaAlcohol;
+	let banderaTipo;
+
 	banderaTipo = true;
 	banderaAlcohol = true;
+	
 	cantidad = 0;
 	cantidadAlcohol = 0;
 	cantidadBarbijo = 0;
@@ -42,35 +51,30 @@ function mostrar()
 	for (i = 0; i < 5; i++)
 	{
 		producto = prompt("Ingrese producto: jabon, barbijo o alcohol");
-
 		while(!(producto == "jabon" || producto == "barbijo" || producto == "alcohol"))
 		{
 			producto = prompt("Error, ingrese productos: jabon, barbijo o alcohol")
 		}
 
 		precio = parseFloat(prompt("Ingrese precio entre $100 y $300"));
-
 		while(isNaN(precio) || precio < 100 || precio > 300)
 		{
 			precio = parseFloat(prompt("Error, ingrese precio entre $100 y $300"))
 		}
 
 		cantidad = parseInt(prompt("Ingrese cantidad de productos (la cantidad no puede ser 0 ni mayor a 1000 unidades)"));
-
 		while(isNaN(cantidad) || cantidad <= 0 || cantidad > 1000)
 		{
 			cantidad = parseInt(prompt("Error, ingrese cantidad de productos (la cantidad no puede ser 0 ni mayor a 1000 unidades)"))
 		}
 
 		marca = prompt("Ingrese la marca del producto");
-
 		while(!(isNaN(marca)))
 		{
 			marca = prompt("Error, Ingrese la marca del producto)")
 		}
 
 		fabricante = prompt("Ingrese fabricante del producto");
-
 		while (!(isNaN(fabricante)))
 		{
 			fabricante = prompt("Error, ingrese fabricante del producto")
@@ -81,16 +85,19 @@ function mostrar()
 			case "barbijo":
 
 				cantidadBarbijo += cantidad;
+				contadorBarbijo ++;
 				break;
 
 			case "jabon":
 				
 				cantidadJabon += cantidad;
+				contadorJabon ++;
 				break;
 
 			case "alcohol":
 
 				cantidadAlcohol += cantidad;
+				contadorAlcohol ++;
 
 				if (banderaAlcohol == true)
 				{
@@ -122,8 +129,25 @@ function mostrar()
 		}
 	}
 
-	suma = precio * cantidadMayor;
-	promedio = suma / 5;
+	switch(productoMayor)
+	{
+		case "jabon":
+
+			promedio = cantidadJabon / contadorJabon;
+			break;
+
+		case "alcohol":
+
+			promedio = cantidadAlcohol / contadorAlcohol;
+			break;
+
+		case "barbijo":
+
+			promedio = cantidadBarbijo / contadorBarbijo;
+			break;
+	}
+	
+
 
 	console.log ("Del alcohol mas barato las unidades son de " + cantidadAlcoholMasBajo + " y su fabricante es " + fabricanteAlcoholMasBajo)
 	console.log ("el promedio por compra del producto con más unidades es de " + promedio);
