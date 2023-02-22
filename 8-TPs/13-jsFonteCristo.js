@@ -9,5 +9,17 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
 */
 function ComenzarIngreso () 
 {
- 	
+ 	let numero;
+    let numeroPar;
+
+    numero = document.getElementById("txtIdNumero").value;
+
+    for (i = 0; i < numero; i++)
+    {
+        if(numero / i == 0)
+        {
+            numeroPar = i;
+            console.log(numeroPar);
+        }
+    }
 }
