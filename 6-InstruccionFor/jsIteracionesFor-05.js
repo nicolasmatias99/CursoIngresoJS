@@ -32,51 +32,48 @@ function mostrar()
 	for (i = 1; i <= 7; i++)
 	{
 
-		nota = parseInt(prompt("Ingrese una nota del 0 al 10"));
+		nota = parseInt(prompt("Ingrese una nota del 0 al 10"));	//PIDO LA NOTA AL USUARIO.
+		while(isNaN (nota) || nota <= 0 || nota > 10)		//VALIDO QUE LA NOTA ESTE ENTRE 0 Y 10.
+		{
+			nota = parseInt(prompt("Error, ingrese un número del 0 al 10"));
+		} 
+	
+		sexo = prompt("Ingrese su sexo: f, m o b");			//PIDO EL SEXO.
+		while(!(sexo == "f" || sexo == "m" || sexo == "b"))			//VALIDO QUE SEA F, M O B.
+		{
+			sexo = prompt("Error: ingrese f, m o b");
+		}
 
-	
-			while(isNaN (nota) || nota < 0 || nota > 10)
-			{
-				nota = parseInt(prompt("Error, ingrese un número del 0 al 10"));
-			} 
-	
-		sexo = prompt("Ingrese su sexo: f, m o b");
-		
-			while(!(sexo == "f" || sexo == "m" || sexo == "b"))
-			{
-				sexo = prompt("Error: ingrese f, m o b");
-			}
-	
-			if (sexo == "m" || sexo == "M")
-			{
-				contadorM ++;
-			}
+		if (sexo == "m" || sexo == "M")
+		{
+			contadorM ++;
+		}
 			
-			console.log (nota + " " + sexo)
+		console.log (nota + " " + sexo)
 
-			if(banderaNota == true)				//BUSCO LA NOTA MAS BAJA.
-			{
-				notaBaja = nota;
-				sexoDeNotaBaja = sexo;
-				banderaNota = false;
-			}
-			else if (nota < notaBaja)
-			{
-				notaBaja = nota;
-				sexoDeNotaBaja = sexo;
-			}	
+		if(banderaNota == true)				//TOMO EL VALOR DE LA PRIMERA NOTA Y CIERRO EL BLOQUE.
+		{
+			notaBaja = nota;
+			sexoDeNotaBaja = sexo;
+			banderaNota = false;
+		}
+		else if (nota < notaBaja)			//ACTUALIZO LA NOTA BAJA SI ES LA NOTA QUE IGRESAN ES MENOR.
+		{
+			notaBaja = nota;
+			sexoDeNotaBaja = sexo;
+		}	
 			
-			if(nota < 4)
-			{
-				contadorDesaprobados ++;
-			}
+		if(nota < 4)		//CUENTO DESAPROBADOS
+		{
+			contadorDesaprobados ++;
+		}
 
-			else if (nota >= 6 && sexo == "m" || sexo == "M")
-			{
-				contadorVaronesAprobados ++; 
-			}
+		else if (nota >= 6 && sexo == "m" || sexo == "M")		//CUANTO APROBADOS VARONES.
+		{
+			contadorVaronesAprobados ++; 
+		}
 
-			sumaNotas += nota;
+		sumaNotas += nota;
 	}
 
 	promedio = sumaNotas / 7; 	//DIVIDO POR CANTIDAD DE NOTAS Y SACO EL PROMEDIO.
